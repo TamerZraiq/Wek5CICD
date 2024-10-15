@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/persons")
 public class PersonController {
     List<Person>personList = new ArrayList<>();
-    @GetMapping
+    @GetMapping("/listPerson")
     public List<Person> getPerson() {
         return personList;
     }
@@ -19,4 +19,5 @@ public class PersonController {
         personList.add(person);
         return personList;
     }
+
 }
